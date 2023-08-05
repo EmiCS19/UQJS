@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+</head>
+
+<body>
+    <form>
+        <label for="mensaje">Ingrese el mensaje cifrado:</label>
+        <input type="text" id="mensajeCifrado">
+        <button type="button" onclick="descifrarMensaje()">Descifrar</button>
+    </form>
+
+    <script>
+        function descifrarCesar(textoCifrado, desplazamiento) {
+            var resultado = "";
+
+            for (var i = 0; i < textoCifrado.length; i++) {
+                var caracter = textoCifrado[i];
+                
+                if (caracter.match(/[a-z]/i)) {
+                    var codigo = textoCifrado.charCodeAt(i);
+                    var base = (codigo < 91) ? 90 : 122;
+                    var descifrado = String.fromCharCode(((codigo - base - desplazamiento) % 26) + base);
+                    resultado += descifrado;
+                } else {
+                    resultado += caracter;
+                }
+            }
+            return resultado;
+        }
+        
+        function descifrarMensaje() {
+            var mensajeCifradoInput = document.getElementById('mensajeCifrado');
+            var mensajeCifrado = mensajeCifradoInput.value;
+            var mensajeDescifrado = descifrarCesar(mensajeCifrado, 3);
+            alert("Mensaje descifrado: " + mensajeDescifrado);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Kyaa</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="vari">
+        <input type="text" id="varj">
+        <button type="button" onclick="calc()" value="suma">Calcular</button>
+        <p id="resultado"></p>
+
+        <script>
+            var i, j;// Alt+Shift+F para que el codigo se vea chido
+            function calc() {
+                var i = Number(document.getElementById("vari").value)
+                var j = Number(document.getElementById("varj").value)
+
+                document.getElementById("resultado").innerHTML = "tu resultado es " + (i + j);
+            }
+
+        //alert(`El resultado es ${i}+${j}=${suma} `);
+        </script>
+    </form>
+</body>
+
+</html>

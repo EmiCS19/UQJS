@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyaa</title>
+</head>
+<body>
+
+    <form>
+    <label>nombre</label>
+    <input type="text" id="nombre"><br>
+    <label>edad</label>
+    <input type="text" id="edad"><br>
+    <label>FN</label>
+    <input type="text" id="FN"> <br>
+
+    <p id="Carlos">Info</p>
+    <button type="button" onclick="moisex()">Concatenar</button>
+    <script>
+        function moisex(){
+            var nom=document.getElementById("nombre").value;
+            var edad=document.getElementById("edad").value;
+            var FN=document.getElementById("FN").value;
+
+            document.getElementById("Carlos").innerHTML =`El nombre del usuario es ${nom}, su edad es ${edad}, y su fecha de nacimiento es ${FN}`;
+        }
+    </script>
+    </form>
+</body>
+</html>

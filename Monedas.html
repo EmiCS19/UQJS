@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="monedas.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="monedas.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #FCC8D1;"> <!--#98EECC-->
+  <h1>Monedas y balanza</h1>
+
+  <div class="container">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Información del juego
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Información e instrucciones</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p> ¿En qué consiste el juego? El juego consiste en descubrir una moneda falsa de entre 8 monedas. La moneda falsa pesa más que las
+              monedas
+              reales, además se tiene una balanza para poder pesar las monedas
+              pero esta balanza solo se puede usar 2 veces.</p> <br>
+
+            <p>Intrucciones</p><br>
+            <p>1. Seleccionar de que lado de la balanza irá una moneda, también se puede dejar sin seleccionar si así lo decides, pero ten cuidado una vez que seleccionas una moneda ya no la puedes cambiar hasta después de usar el botón de balancear</p><br>
+            <p>2. El botón de balancear solo se puede usar 2 veces, después solo podrás usar los botones de "Limpiar campos" y "Comprobar" </p><br>
+            <p>3. Debajo de los botones de "Limpiar campos" y "Comprobar" hay un párrafo de texto que te indicara la cantidad de veces que has usado la balanza y  que lado es más pesado o si ambos lados pesan lo mismo. El párrafo también incluye información acerca de cuales son las monedas que están en los lados de la balanza</p><br>
+            <p>4. El botón de limpiar campos limpia las selecciones hechas anteriormente. Este botón sirve por si quieres volver a seleccionar un elemento pero ya los seleccionaste anteriormente y sigue ahí, o puede ser usado simplemente porque prefieres ver los campos vacíos </p><br>
+            <p>5. En el campo para ingresar la moneda correcta ingresar <b>solamente el número de la moneda.</b> El botón de comprobar solamente comprobará la acción y desplegara una alerta diciendo si la respuesta es correcto o no. Además este botón solo estará habilitado después de usar el botón de balancear por segunda vez</p><br>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Modal -->
+
+  <!--Modal 2-->
+  <!-- Scrollable modal -->
+  <div class="modal-dialog modal-dialog-scrollable">
+    ...
+  </div> <!--Modal 2-->
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="contcoins">
+        <label for="select1" class="labcoins">Moneda 1</label><br>
+        <select id="select1" onchange="balancear1()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+      <div class="contcoins">
+        <label for="select2" class="labcoins">Moneda 2</label><br>
+        <select id="select2" onchange="balancear2()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+
+      <div class="contcoins">
+        <label for="select3" class="labcoins">Moneda 3</label><br>
+        <select id="select3" onchange="balancear3()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+      <div class="contcoins">
+        <label for="select4" class="labcoins">Moneda 4</label><br>
+        <select id="select4" onchange="balancear4()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+      <div class="contcoins">
+        <label for="select5" class="labcoins">Moneda 5</label><br>
+        <select id="select5" onchange="balancear5()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+      <div class="contcoins">
+        <label for="select6" class="labcoins">Moneda 6</label><br>
+        <select id="select6" onchange="balancear6()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+
+      <div class="contcoins">
+        <label for="select7" class="labcoins">Moneda 7</label><br>
+        <select id="select7" onchange="balancear7()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+
+      <div class="contcoins">
+        <label for="select8" class="labcoins">Moneda 8</label><br>
+        <select id="select8" onchange="balancear8()">
+          <option value="" selected hidden></option>
+          <option value="value1">Lado izquierdo de la balanza</option>
+          <option value="value2">Lado derecho de la balanza</option>
+          
+        </select>
+      </div>
+      <br><br>
+
+      <div class="contcoins">
+        <button type="submit" class="btn btn-primary" id="boton1" onclick="usar1()">Balancear</button>
+        <button type="submit" class="btn btn-primary" id="btnclean" onclick="limpiar()">Limpiar campos</button><br><br>
+      </div>
+
+
+
+      <div class="container">
+        <p id="parrafo">Hola </p>
+        <p id="parrafo2"></p>
+      </div> <br>
+
+      <form>
+        <div class="container">
+          <label for="exampleInputEmail1" class="form-label">Ingrese que moneda es la correcta (Sólo el número de la moneda que es correcta)</label>
+          <input class="form-control" type="text" id="txtcomp" aria-label="default input example" disabled>
+          <div id="emailHelp" class="form-text"> </div>
+        </div>
+
+        <button type="submit" id="btncompr" class="btn btn-primary" disabled onclick="btncomprobar()">Comprobar</button>
+      </form>
+
+
+    </div>
+  </div> <br>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

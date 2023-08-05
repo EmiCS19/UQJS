@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="" value="op"></button>
+
+    <script>
+        function opcion() {
+            do{
+                var cl= prompt("Ingrese una opcion \n Opcion 1 Suma\n Opcion 2 Resta\n Opcion 3 Division\n Opcion 4\n Opcion 5\n")
+                switch (cl) {
+                    case "1":
+                        let num1= parseFloat(prompt("Ingrese su primer numero"));
+                        let num2= parseFloat(prompt("Ingrese su segundo numero"));
+                        let suma= num1+num2
+                        alert(`${num1} + ${num2} =${suma}`)
+                        break;
+
+                    case "2":
+                        let num1r= parseFloat(prompt("Ingrese su primer numero"));
+                        let num2r= parseFloat(prompt("Ingrese su segundo numero"));
+                        let resta= num1-num2
+                        alert(`${num1r} - ${num2r} =${resta}`)
+                        break;
+                    case "3":
+                        
+
+                
+                    default:
+                        break;
+                }
+
+            } while(cl!=5)
+        }
+    </script>
+</body>
+</html>

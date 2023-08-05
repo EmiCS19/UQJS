@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>base</label><br>
+    <input type="text" id="Liverpool"><br>
+    <label>altura</label><br>
+    <input type="text" id="united"><br>
+    <p id="resut"></p><br>
+    <button type="button" onclick="YNWA()">Calcula</button>
+
+
+    <script>
+        function YNWA() {
+            let i,j,r;
+
+            i=Number(document.getElementById("Liverpool").value)
+            j=Number(document.getElementById("united").value)
+            r=(i*j)/2;
+            document.getElementById("resut").innerHTML=`tu resultado es ${r}`;
+        }
+    </script>
+</body>
+</html>

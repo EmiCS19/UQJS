@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+</head>
+
+<body>
+    <script>
+        function cifrarCesar(texto, desplazamiento) {
+            var resultado = "";
+
+            for (var i = 0; i < texto.length; i++) {
+                var caracter = texto[i];
+                
+                if (caracter.match(/[a-z]/i)) {
+                    var codigo = texto.charCodeAt(i);
+                    var base = (codigo < 91) ? 65 : 97;
+                    var cifrado = String.fromCharCode(((codigo - base + desplazamiento) % 26) + base);
+                    resultado += cifrado;
+                } else {
+                    resultado += caracter;
+                }
+            }
+            return resultado;
+        }
+        var mensaje = prompt('Ingrese su mensaje para cifrar');
+        var mensajeCifrado = cifrarCesar(mensaje, 3);
+        alert("Mensaje cifrado: " + mensajeCifrado);
+    </script>
+</body>
+
+</html>

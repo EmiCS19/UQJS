@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternario</title>
+    <script>
+        //function
+        function evalDayT(dia) {
+
+            dia = parseInt(dia)
+            let mensaje =
+                dia >= 1 && dia <= 7
+                    ? dia === 1
+                        ? "Lunes"
+                        : dia === 2
+                            ? "Martes"
+                            : dia === 3
+                                ? "Miercoles"
+                                : dia === 4
+                                    ? "Jueves"
+                                    : dia === 5
+                                        ? "Viernes"
+                                        : dia === 6
+                                            ? "Sabado"
+                                            : "Domingo"
+                                            : "Dia invalido"
+            document.getElementById("resultT").innerHTML = "Resultado ternario: " + mensaje;
+        }
+        function evalDayS(dia) {
+            dia = parseInt(dia);
+            let mesaje;
+            switch (dia) {
+                case 1:
+                    mesaje = `Lunes`
+                    break;
+                case 2:
+                    mesaje = "Martes"
+                    break;
+
+                case 3:
+                    mesaje = "Miercoles"
+                    break;
+
+                case 4:
+                    mesaje = "Jueves"
+                    break;
+
+                case 5:
+                    mesaje = "Viernes"
+                    break;
+
+                case 6:
+                    mesaje = "Sabado"
+                    break;
+
+                case 7:
+                    mesaje = "Domingooo"
+                    break;
+
+                default:
+                    mesaje = "INvalido"
+                    break;
+            }
+            document.getElementById("resultS").innerHTML = "Resultado Switch: " + mesaje;
+
+        }
+        function evalDayIf(dia) {
+            dia = parseInt(dia);
+            let mensaje;
+            if (dia === 1) {
+                mensaje = "lunes";
+            } else if (dia === 2) {
+                mensaje = "Martes";
+            } else if (dia === 3) {
+                mensaje = "Miercoles";
+            } else if (dia === 4) {
+                mensaje = "Jueves";
+            } else if (dia === 5) {
+                mensaje = "Viernes";
+            } else if (dia === 6) {
+                mensaje = "sabado";
+            } else if (dia === 7) {
+                mensaje = "Domingop";
+            }
+
+            document.getElementById("resultIf").innerHTML = "resultado (IF): " + mensaje;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Evaluar day de la semana</h1>
+    <input type="number" name="" id="dia">
+    <button onclick="evalDayT(document.getElementById('dia').value)">Evaluar (Ternario)</button>
+    <button onclick="evalDayS(document.getElementById('dia').value)">Evaluar (Switch)</button>
+    <button onclick="evalDayIf(document.getElementById('dia').value)">Evaluar (if)</button>
+    <br>
+    <div>
+        <p id="resultT"></p><br>
+        <p id="resultS"></p><br>
+        <p id="resultIf"></p><br>
+    </div>
+</body>
+
+</html>

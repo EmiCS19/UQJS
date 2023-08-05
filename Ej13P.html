@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #9599;">
+    <script>
+        function numMayor(a,b) {
+            return a > b ? a:b;
+        }
+        //alert(numMayor(10,19));
+        let numA=parseFloat(prompt('Ingresa el  primer numero: '));
+        let numB=parseFloat(prompt('Ingresa el segundo numero '));
+
+        if (isNaN(numA) || isNaN(numB)) {
+            alert('Debes ingresar numeros validos');
+        } else{
+            let resultado= numMayor(numA,numB);
+            alert(`El numero mayor es ${resultado}`);
+        }
+    </script>
+</body>
+</html>
